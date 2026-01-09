@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "title": "Leadership Discussion",
+    "createdAt": "2026-01-09T00:00:00.000Z",
+    "updatedAt": "2026-01-09T00:00:00.000Z"
+  },
+  "mode": "start",
+  "selectedRef": null,
+  "questions": [
+    {
+      "order": 1,
+      "question": "What are our goals?",
+      "povMode": "visual",
+      "pov": ""
+    },
+    {
+      "order": 2,
+      "question": "What is our success metric?",
+      "povMode": "visual",
+      "pov": ""
+    },
+    {
+      "order": 3,
+      "question": "how is chatgpt doing it?",
+      "povMode": "visual",
+      "pov": "End User Experience\nAdmin Experience"
+    },
+    {
+      "order": 4,
+      "question": "What end-user value are we targeting?",
+      "povMode": "visual",
+      "pov": "• Personal AI Assistant for Work — Quick individual setup with immediate payoff.\n• Team Pilot, Bottom-Up Adoption — Small group uses user-sync to prove the case for AI.\n• Integrating Personal & Private Data — Bringing in data that admins can't centrally index."
+    },
+    {
+      "order": 5,
+      "question": "What is the MVP?",
+      "pov": "Starting point:\n- What are the targeted surfaces?\n- What are the targeted connectors?\n- What will be the phases of MVP?",
+      "subquestions": [
+        {
+          "order": "5.1",
+          "question": "What are the targeted surfaces?",
+          "povMode": "visual",
+          "pov": "There are two virality angles that we have explored\n• Virality via discovery — Drive growth with improved discovery via user-led distribution (remove Admin intervention)\n• Virality via sharing — Drive growth by enabling key people/team leads create Agents shared across the team.\n\nBizChat / Researcher / Agents (with Maker exp) / Search\nWhy? — BizChat has the highest MAU, hence highest discovery surface. OpenAI also prioritized Mainline."
+        },
+        {
+          "order": "5.2",
+          "question": "What are the targeted connectors?",
+          "povMode": "visual",
+          "pov": "Principles of connector selection\n• Notion of private data\n• Tough ACLs which are brittle at tenant level\n• High relevance to my workspace / project (my items, my tickets)\n• Files and tickets domain (has a proven quality tenant connector)\n• High usage (popular source)\n• Fast go to market (tenant-sync connector already exists)\n• No / Less overlap with MCP\n\nTargeted connectors:\nJira / Confluence / Google Drive / ADO Work Items / Box / Dropbox"
+        },
+        {
+          "order": "5.3",
+          "question": "What will be the phases of MVP?",
+          "povMode": "visual",
+          "pov": "• Crawl — Deliver an MVP and prove value with limited connectors and surfaces (Mainline only)\n• Walk — Expand to next top connectors and enable Maker + Self-Agents experiences\n• Run — Enable sharing of Agents & connections. Build workflows to push Admins to enable tenant-sync for heavily used user-sync connectors."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "question": "What Data Do We Ingest per Connector? Do we ingest everything the user can see, or do we apply additional heuristics to keep the corpus tight?",
+      "povMode": "visual",
+      "pov": "TBD\nExamples:\n1. Google Drive\n• My Drive files\n• Files/folders shared with me\n• What about org-wide shared drives?"
+    },
+    {
+      "order": 7,
+      "question": "Shared vs Private indexing? How do we avoid N copies of broadly shared objects? How do we reason about aggregate cost when scaled to many users?",
+      "povMode": "visual",
+      "pov": "TBD"
+    },
+    {
+      "order": 8,
+      "question": "How do we maintain response quality when both tenant-sync and user-sync co-exist? + MCP too",
+      "povMode": "visual",
+      "pov": "• Mainline — Fan out to all connections irrespective.\n• Agents — TBD\n• Search — Can we de-dup results based on item id?"
+    },
+    {
+      "order": 9,
+      "question": "How will an Admin manage these connectors?",
+      "povMode": "visual",
+      "pov": "• Admin must be able to control enablement of a user-level sync connector to employees.\n• Admin must be able to selectively enable a user-level connector to — 1) All employees 2) Specific employees (Entra groups)\n• Admin must be able to restrict crawling of user-level connectors to certain base domain(s)."
+    },
+    {
+      "order": 10,
+      "question": "How will an Admin observe these connectors' usage?",
+      "povMode": "visual",
+      "pov": "• Admin must be able to check the number & list of users who are using the connection\n• Admin must be able to check the number & list of Agents operating on a connection"
+    },
+    {
+      "order": 11,
+      "question": "What is the user's connector configuration experience like?",
+      "povMode": "visual",
+      "pov": "PM prototype: M365 Copilot"
+    },
+    {
+      "order": 12,
+      "question": "What is the user's mainline usage experience like?",
+      "povMode": "visual",
+      "pov": ""
+    },
+    {
+      "order": 13,
+      "question": "What will be the release criteria?",
+      "povMode": "visual",
+      "pov": "Evals: A slice of the tenant-sync evals which must perform at parity with tenant-sync connectors."
+    }
+  ]
+}
