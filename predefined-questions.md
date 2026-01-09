@@ -204,11 +204,26 @@ Evals: A slice of the tenant-sync evals which must perform at parity with tenant
 
 These questions can be imported into the Discussion Driver tool by:
 1. Opening the Discussion Driver Dashboard HTML file in your browser
-2. Clicking the "Load prefilled questions" button, OR
-3. Using the "Import JSON" feature with the `predefined-questions.json` file
+2. Clicking the "Load prefilled questions" button (loads built-in questions), OR
+3. Using the "Import JSON" feature with the `predefined-questions.json` file (loads from file)
+
+The JSON file follows the application's state structure:
+```json
+{
+  "meta": {
+    "title": "Leadership Discussion",
+    "createdAt": "2026-01-09T00:00:00.000Z",
+    "updatedAt": "2026-01-09T00:00:00.000Z"
+  },
+  "mode": "start",
+  "selectedRef": null,
+  "questions": [ ... ]
+}
+```
 
 ## Notes
 
 - Questions marked with "POV Mode: Visual" have associated visual diagrams in the tool
 - Subquestions provide detailed breakdown for complex topics
 - POV (Point of View) sections provide starting points for discussion
+- The JSON file can be imported directly using the "Import JSON" button in the tool
