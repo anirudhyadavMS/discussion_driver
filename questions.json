@@ -1,0 +1,178 @@
+{
+  "version": "1.0",
+  "description": "Predefined questions for the User Sync Connectors Brainstorm Driver",
+  "motivations": [
+    {
+      "id": "m1",
+      "name": "OpenAI parity",
+      "desc": "Match competitive expectations / feature completeness."
+    },
+    {
+      "id": "m2",
+      "name": "AU w. enhanced discovery / virality",
+      "desc": "Drive active usage via better discovery, sharing, and distribution."
+    },
+    {
+      "id": "m3",
+      "name": "Better response quality",
+      "desc": "Improve grounding, personalization, and relevance via synced user context."
+    }
+  ],
+  "pillars": [
+    {
+      "id": "p1",
+      "title": "Personal AI Assistant for Work",
+      "subtitle": "Quick individual setup – immediate payoff.",
+      "scenario": "A Slack power user connects Copilot to GDrive and Slack in just a few clicks—no IT help needed. By lunchtime, Copilot is synced and ready. She can instantly ask:\n\n\"Summarize latest of Project Atlas and update the Atlas Status sheet in GDrive.\"\n\n\"Find the budget sheet I created and send the summary to Rohan.\""
+    },
+    {
+      "id": "p2",
+      "title": "Team Pilot, Bottom-Up Adoption",
+      "subtitle": "Small group uses user-sync to prove the case for AI.",
+      "scenario": "Finance team pilots AI with user-synced apps. They connect Google Drive and Slack to Copilot, enabling natural language queries like:\n\n\"What were last quarter's key findings?\"\n\n\"What issues came up during the audit?\"\n\nPOC proves productivity gains without security risks. Their success becomes a proof point that convinces IT to roll out connectors org-wide—showing how bottom-up adoption drives innovation."
+    },
+    {
+      "id": "p3",
+      "title": "Integrating Personal & Private Data",
+      "subtitle": "Bringing in data that admins can't centrally index.",
+      "scenario": "User-level connectors enable Copilot to access data that admins can't centrally index, such as an executive's private calendar or 1:1 chats. With user authentication, assistants can securely connect calendars and email so Copilot can answer questions like:\n\n\"When is the next board meeting?\"\n\n\"Summarize today's CEO emails.\"\n\nUnlike tenant connectors, this approach keeps data confidential and delivers personalized insights that broad integrations can't provide."
+    }
+  ],
+  "cwrPhases": [
+    {
+      "id": "crawl",
+      "title": "Crawl",
+      "subtitle": "Prove value with a focused MVP.",
+      "scenario": "POV: Ship the smallest safe slice that proves user value.\n\nScope:\n- Deliver an MVP with limited, high-signal connectors\n- Mainline surfaces only (primary Copilot/chat experience)\n- Core flows: connect → consent → use → revoke\n\nNon-goals:\n- Sharing agents/connections\n- Cross-user workflows\n- Tenant-wide enablement\n\nSuccess signals:\n- Meaningful usage lift in target cohort\n- Clear response-quality or time-saved proof points\n- Low support + low security incidents"
+    },
+    {
+      "id": "walk",
+      "title": "Walk",
+      "subtitle": "Expand coverage + enable richer experiences.",
+      "scenario": "POV: Turn the MVP into repeatable adoption by widening the funnel and unlocking compound use-cases.\n\nScope:\n- Expand to next top connectors\n- Enable Maker experiences (build/customize)\n- Enable Self-Agents (multi-step, multi-connector)\n- Better onboarding, error recovery, observability\n\nSuccess signals:\n- Multi-connector scenarios become common\n- Retention / weekly active usage increases\n- Admin sentiment improves (fewer exceptions, clearer controls)"
+    },
+    {
+      "id": "run",
+      "title": "Run",
+      "subtitle": "Scale, share, and institutionalize.",
+      "scenario": "POV: Move from individual value → organizational leverage.\n\nScope:\n- Enable sharing of Agents & connections (clear permission model)\n- Build workflows that nudge admins toward tenant-sync for heavily used user-sync connectors\n- Converge user-sync + tenant-sync into a cohesive admin model\n\nSuccess signals:\n- Admin-led rollout / defaults\n- Ecosystem effects (shared agents)\n- Durable platform adoption (lower churn, higher stickiness)"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "title": "1. Motivation for user sync connectors",
+      "desc": "Critique the motivations and rank them by priority. Capture critique ideas as cards.",
+      "pov": "POV:\n- Motivation is **virality + growth**, not \"parity\".\n- User-sync should unlock **discovery + sharing loops** while staying user-led (minimal admin gating).\n\nLT feedback asks:\n- What is the #1 business metric we should anchor on?\n- Any red lines on security / privacy?",
+      "pill": "Why now",
+      "tags": [],
+      "starter": ""
+    },
+    {
+      "id": "q2",
+      "title": "2. How is ChatGPT doing it?",
+      "desc": "Review two views (Admin Flow vs End User Flow). Add questions/feedback and vote with 👍/👎.",
+      "pov": "POV:\n- Treat it as **admin policy + user connection**: admins enable the capability, users consent & connect accounts.\n- Default to **user-led distribution** (remove admin intervention where possible).\n\nLT feedback asks:\n- Where do we draw the line between user-led vs admin-led?\n- What approval points are non-negotiable?",
+      "pill": "Reference",
+      "tags": [],
+      "starter": ""
+    },
+    {
+      "id": "q3",
+      "title": "3. Value framing for user sync connectors",
+      "desc": "Use a 3-pillar framing. Click into a pillar to review scenarios and reserve image space.",
+      "pov": "POV:\n- Frame value in 3 pillars:\n  1) Personal AI assistant for work\n  2) Team pilot → bottom-up adoption\n  3) Integrating personal & private data\n\nLT feedback asks:\n- Which pillar should we lead with for MVP?",
+      "pill": "Narrative",
+      "tags": [
+        "What is the buyer story vs user story?",
+        "What metrics prove value?",
+        "What is the strongest pillar for MVP?"
+      ],
+      "starter": "Draft 1–2 sentences for the value prop and list measurable outcomes."
+    },
+    {
+      "id": "q4",
+      "title": "4. MVP phasing: Crawl – Walk – Run",
+      "desc": "Crawl / Walk / Run — agree the rollout phasing and what \"done\" means per phase.",
+      "pov": "POV (Crawl–Walk–Run):\n- **Crawl:** MVP on limited connectors + mainline surfaces to prove value safely.\n- **Walk:** Expand connectors + enable Maker + Self-Agents.\n- **Run:** Enable sharing of Agents & connections; workflows that push admins toward tenant-sync for heavily used user-sync connectors.\n\nLT feedback asks:\n- Are phases sequenced correctly?\n- What's the minimum proof for moving Crawl → Walk?",
+      "pill": "Phasing",
+      "tags": [
+        "Crawl: MVP scope (limited connectors + mainline surfaces)",
+        "Walk: Next connectors + Maker + Self-Agents",
+        "Run: Share agents & connections + workflows → tenant-sync",
+        "Success metrics per phase"
+      ],
+      "starter": "Crawl – Deliver an MVP and prove value with limited connectors and surfaces (Mainline only)\n\nWalk – Expand to next top connectors and enable Maker + Self-Agents experiences\n\nRun – Enable sharing of Agents & connections. Build workflows to push Admins to enable tenant-sync for heavily used user-sync connectors."
+    },
+    {
+      "id": "q4a",
+      "title": "4a. Which surfaces should we target?",
+      "desc": "Two target surfaces — Mainline/Researcher and Agents — each with a virality thesis.",
+      "pov": "POV (2 surfaces):\n- **Mainline/Researcher:** *Virality via discovery* — drive growth with improved discovery via user-led distribution (remove Admin intervention).\n- **Agents:** *Virality via sharing* — enable key people/team leads to create Agents shared across the team.\n\nLT feedback asks:\n- Which surface should lead in the narrative?\n- Any concerns about sharing model?",
+      "pill": "Surfaces",
+      "tags": [
+        "Admin console",
+        "End-user settings / profile",
+        "In-product onboarding",
+        "Copilot chat / composer"
+      ],
+      "starter": "List candidate surfaces and what users do there.\n\nFor each surface: trigger → action → feedback → recovery (errors/permissions)."
+    },
+    {
+      "id": "q4b",
+      "title": "4b. Which connectors are we targeting?",
+      "desc": "Prioritize connectors by impact and feasibility.",
+      "pov": "POV:\n- Start with **Tier-1 connectors** that maximize immediate daily value and virality loops (discovery/sharing).\n- Keep MVP narrow; expand only after strong signal.\n\nLT feedback asks:\n- Which 2–3 connectors must be in Crawl?",
+      "pill": "Targets",
+      "tags": [
+        "Top 3 by customer demand",
+        "Top 3 by technical feasibility",
+        "Enterprise-critical sources",
+        "Long-tail / future"
+      ],
+      "starter": "Create a short list:\n- Tier 1 (MVP)\n- Tier 2 (next)\n- Tier 3 (later)\n\nAdd why: demand, coverage, complexity, risk."
+    },
+    {
+      "id": "q4c",
+      "title": "4c. What is the data ingest model?",
+      "desc": "What data is synced, how, and with what guarantees?",
+      "pov": "POV:\n- Keep ingest minimal + safe: identity mapping + entitlements first; then deltas; strong audit/observability.\n- Prefer **delta / event-driven** where possible; define clear SLAs.\n\nLT feedback asks:\n- What latency / SLA is acceptable for MVP?",
+      "pill": "Data",
+      "tags": [
+        "Identity + org mapping",
+        "Groups / roles / entitlements",
+        "Delta vs full sync",
+        "Latency + SLAs"
+      ],
+      "starter": "Define:\n- Entities (users, groups, roles…)\n- Mapping keys\n- Sync mode (full/delta/event-driven)\n- Storage + retention\n- Auditing + observability"
+    },
+    {
+      "id": "q4d",
+      "title": "4d. MVP phases",
+      "desc": "A phased plan to reduce risk and ship sooner.",
+      "pov": "POV:\n- Use phased rollout with entry/exit criteria: threat model → limited beta → GA for Tier-1 → scale + ecosystem.\n- Distinguish hardening vs new features.\n\nLT feedback asks:\n- What is the right cohort for beta? Any must-have launch partners?",
+      "pill": "Phases",
+      "tags": [
+        "Phase 0: Design + threat model",
+        "Phase 1: Limited beta",
+        "Phase 2: GA for Tier-1 connectors",
+        "Phase 3: Scale + ecosystem"
+      ],
+      "starter": "Draft phases with: entry criteria, exit criteria, and customer cohort.\n\nAlso call out what is \"hardening work\" vs \"new features\"."
+    },
+    {
+      "id": "q5",
+      "title": "5. Unifying connectors for Admin + end-user",
+      "desc": "One mental model and one system for many connector types.",
+      "pov": "POV:\n- One connector mental model: shared primitives (auth, scopes, policy), consistent lifecycle (install→configure→monitor), clear delegation (admin enables, user connects).\n\nLT feedback asks:\n- What do we need to make admins comfortable while keeping it user-led?",
+      "pill": "Unify",
+      "tags": [
+        "Shared primitives (auth, scopes, policies)",
+        "Connector lifecycle (install→configure→monitor)",
+        "Delegation model (admin enables, user connects)",
+        "Consistency across types"
+      ],
+      "starter": "Propose a unified model:\n- Primitives (connector, account, policy, workspace, permission)\n- Admin actions vs user actions\n- Audit logs + health\n\nThen list edge cases (multi-tenant, offboarding, revocation)."
+    }
+  ]
+}
